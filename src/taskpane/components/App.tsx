@@ -26,7 +26,7 @@ const App: React.FC<AppProps> = (props: AppProps) => {
       <TextInsertion insertText={insertText} />
       {/* Open dialog button */}
       <button onClick={() => Office.context.ui.displayDialogAsync(
-        "https://localhost:3000/rules/", 
+        "https://localhost:3000/ruledialog/", 
         { 
           height: 50, 
           width: 50

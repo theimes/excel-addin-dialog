@@ -25,6 +25,10 @@ module.exports = async (env, options) => {
         dependOn: "react",
       },
       commands: "./src/commands/commands.ts",
+      ruledialog: {
+        import: "./ruledialog/index.tsx",
+        dependOn: "react",
+      },
     },
     output: {
       clean: true,
@@ -66,11 +70,11 @@ module.exports = async (env, options) => {
         template: "./src/taskpane/taskpane.html",
         chunks: ["polyfill", "taskpane", "react"],
       }),
-      //new HtmlWebpackPlugin({
-      //  filename: "rules/index.html",
-      //  template: "./rules/index.html",
-      //  chunks: ["rules"],
-      //}),
+      new HtmlWebpackPlugin({
+        filename: "ruledialog/index.html",
+        template: "./ruledialog/index.html",
+        chunks: ["polyfill", "react", "ruledialog"],
+      }),
       new CopyWebpackPlugin({
         patterns: [
           {

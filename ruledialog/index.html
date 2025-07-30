@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/ruledialog/favicon.ico" />
+    <!-- Office JavaScript API -->
+    <script
+      type="text/javascript"
+      src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Excel Dialog</title>
+  </head>
+  <body class="dark:bg-gray-900 dark:text-white">
+    <div id="app"></div>
+  </body>
+</html>
+<script>
+  // Initialize the Office context
+  Office.onReady((info) => {
+    if (info.host === Office.HostType.Excel) {
+      // Your initialization code here
+      console.log("Office is ready");
+    }
+  }); 
+</script>
